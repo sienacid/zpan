@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import matplotlib.cbook as cbook
+import os
+cwd=os.getcwd()
+cwd
+os.chdir("/Users/apple/Downloads")
+
+xls_1 = pd.ExcelFile('Data_All.xlsx')
+df_1=pd.read_excel(xls_1, 'Loreal')
+df_loreal=df_1.drop(['Loreal Revenue Growth %'],axis=1)
+df_loreal
+
+cci = pd.ExcelFile('Data_All.xlsx')
+df2 = pd.read_excel(cci,'CCI')
+
+df2.head()
+
+gdp = pd.ExcelFile('Data_All.xlsx')
+df3_1 = pd.read_excel(gdp, 'GDP')
+df3=df3_1.drop(['GDP Growth %'],axis=1)
+df3.head()
